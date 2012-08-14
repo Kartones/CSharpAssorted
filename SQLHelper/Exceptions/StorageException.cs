@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace SQL_Helper.Exceptions
+namespace DataVault.Exceptions
 {
     /// <summary>
     /// Exceptions thrown when performing storage operations

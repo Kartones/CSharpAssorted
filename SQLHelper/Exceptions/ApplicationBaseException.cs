@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SQL_Helper.Exceptions
+namespace DataVault.Exceptions
 {
     /// <summary>
     /// Base exception for all the system. Always inherit from it to create derived exceptions.

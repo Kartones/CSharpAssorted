@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace SQL_Helper.Storage
+namespace DataVault.Storage
 {
     /// <summary>
     /// Generic DB Parameter container. Provides an abstraction from outside the DB layer

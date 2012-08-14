@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 
-namespace SQL_Helper.Storage
+namespace DataVault.Storage
 {
     /// <summary>
     /// Interface to allow iterating a generic List of DBParameters
