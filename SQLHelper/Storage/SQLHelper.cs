@@ -1,18 +1,36 @@
-﻿
-using SQL_Helper.Exceptions;
+﻿using DataVault.Exceptions;
 
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Collections.Generic;
 
-namespace SQL_Helper.Storage
+namespace DataVault.Storage
 {
     /// <summary>
     /// Helper for performing storage access actions to a MS SQL DB
     /// </summary>
     public sealed class SQLHelper
     {
+        #region Fields
+
+        private string dbConnectionString = string.Empty;
+
+        #endregion
+
+        #region Class Constructor
+        
+        /// <summary>
+        /// Class constructor.
+        /// </summary>
+        /// <param name="DBConnectionString">Typical MSSQL connection string</param>
+        public SQLHelper(string DBConnectionString)
+        {
+            dbConnectionString = DBConnectionString;
+        }
+
+        #endregion
+
         #region Public Methods
 
         /// <summary>
@@ -33,7 +51,7 @@ namespace SQL_Helper.Storage
 
             try
             {
-                connection = new SqlConnection(SQL_Helper.Base.ConfigMock.DBConnectionString);
+                connection = new SqlConnection(dbConnectionString);
                 command = new SqlCommand(StoredProcedureName, connection);
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -92,7 +110,7 @@ namespace SQL_Helper.Storage
 
             try
             {
-                connection = new SqlConnection(SQL_Helper.Base.ConfigMock.DBConnectionString);
+                connection = new SqlConnection(dbConnectionString);
                 command = new SqlCommand(StoredProcedureName, connection);
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -157,7 +175,7 @@ namespace SQL_Helper.Storage
 
             try
             {
-                connection = new SqlConnection(SQL_Helper.Base.ConfigMock.DBConnectionString);
+                connection = new SqlConnection(dbConnectionString);
                 command = new SqlCommand(StoredProcedureName, connection);
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -214,7 +232,7 @@ namespace SQL_Helper.Storage
 
             try
             {
-                connection = new SqlConnection(SQL_Helper.Base.ConfigMock.DBConnectionString);
+                connection = new SqlConnection(dbConnectionString);
                 command = new SqlCommand(StoredProcedureName, connection);
                 command.CommandType = CommandType.StoredProcedure;
 
